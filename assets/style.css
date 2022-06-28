@@ -28,21 +28,23 @@ body {
     cursor: pointer;
     transform: scale(1);
     transform-style: preserve-3d; /*não deixa o elemento achatado*/
-    transform: transform .9s;
+    transition: transform .9s;
 }
 
 .Card:active {
     transform: scale(0.97);
-    transform: transform .3s;
+    transition: transform .3s;
 }
 
-.Card-front, .Card-verse {
+.Card-front, 
+.Card-verse {
     width: 100%;
     height: 100%;
     padding: 13px;
     position: absolute;
     border-radius: 5px;
     background-color: #ffffff;
+    backface-visibility: hidden;
 }
 
 .Card-front {
